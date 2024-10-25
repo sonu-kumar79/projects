@@ -5,7 +5,7 @@ const winningPosotions = [
     [0,1,2],
     [3,4,5],
     [6,7,8],
-    [1,3,6],
+    [0,3,6],
     [1,4,7],
     [2,5,8],
     [0,4,8],
@@ -50,7 +50,7 @@ function checkGameOver(){
     let answer = "";
 
     winningPosotions.forEach((position) =>{
-        if((gameGrid[position[0]] !== "" || gameGrid[position[1]] !== "" || gameGrid[position[2]] !== "") && gameGrid[position[0]] === gameGrid[position[1]] && gameGrid[position[0]] === gameGrid[position[2]]){
+        if((gameGrid[position[0]] !== "" || gameGrid[position[1]] !== "" || gameGrid[position[2]] !== "") && (gameGrid[position[0]] === gameGrid[position[1]]) && (gameGrid[position[0]] === gameGrid[position[2]]) ){
             
             // check winner is X or Y
             if(gameGrid[position[0]] == "X") answer = "X";
